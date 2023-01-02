@@ -1,0 +1,17 @@
+<div class="container">
+  <h1 class="text-center"><strong>My items</strong></h1>
+</div>
+
+<div class="container">
+  <div>
+    <% @items.each do |item| %>
+    <div style="width: 18rem;">
+      <div class="d-flex flex-row gap-2">
+        <h5> <%= item.id %></h5>
+        <h5> <%= item.name %></h5>
+        <h5> <%= item.position %></h5>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
