@@ -19,11 +19,12 @@ class Info
   # group by name to check duplicity, add to new array each person but checking create_at to add only one person
   def delete_duplicity
     grouped_entries = @data.entries.group_by(&:name)
-    without_duplicated = []
-    grouped_entries.values.map do |group|
-      without_duplicated << group.max_by(&:created_at)
-    end
-    @data = without_duplicated
+    p grouped_entries.desc(:created_at).limit(1).first
+    # without_duplicated = []
+    # grouped_entries.values.map do |group|
+    #   without_duplicated << group.max_by(&:created_at)
+    # end
+    # @data = without_duplicated
   end
 
   private
