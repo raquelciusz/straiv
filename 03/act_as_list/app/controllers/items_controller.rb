@@ -3,6 +3,7 @@ class ItemsController < ApplicationController
 
   def index
     @items = Item.all
+    @items = @items.order(created_at: :asc)
   end
 
   def show
@@ -29,7 +30,7 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:id, :name)
+    params.require(:item).permit(:id, :name, :position)
   end
 
   def set_item
