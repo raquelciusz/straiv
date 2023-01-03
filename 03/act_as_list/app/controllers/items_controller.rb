@@ -10,11 +10,11 @@ class ItemsController < ApplicationController
 
   def destroy
     @item.destroy
-    redirect_to items_path, notice: "List was successfully destroyed."
+    redirect_to items_path, notice: "Item was successfully destroyed."
   end
 
   private
   def set_item
-    @list = List.find(params[:id])
+    @item = Item.find(params[:id])
   end
 end
