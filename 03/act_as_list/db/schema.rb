@@ -20,5 +20,4 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_02_181250) do
     t.datetime "updated_at", null: false
     t.integer "position"
   end
-
 end
