@@ -19,7 +19,7 @@
     </tbody>
   </table>
   <div class="py-1">
-    <%= button_to "Destroy this item", @item, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-primary mt-3 rounded' %>
+    <%= button_to "Destroy this item", @item, method: :delete, class: 'btn btn-primary mt-3 rounded', data: { confirm: 'Are you sure?' } %>
     <p class="py-3"><%= link_to '<< Back', items_path %></p>
   </div>
 </div>

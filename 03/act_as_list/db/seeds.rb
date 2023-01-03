@@ -1,4 +1,4 @@
-puts 'Cleaning database...'
+puts 'Cleaning database!'
 Item.destroy_all
 
 puts 'Creating items...'
@@ -12,8 +12,5 @@ breakfast = Item.create(id: 2, name: 'Breakfast')
 checkout = Item.create(id: 8, name: 'Check-out')
 transfer = Item.create(id: 10, name: 'Transfer')
 
-puts 'Destroying Portfolio...'
-portfolio.destroy
-
-puts 'Destroying Breakfast...'
-breakfast.destroy
+sleep(2)
+puts 'DONE :)'
